@@ -1,15 +1,22 @@
-import {Container, Flex, Heading, Stack, Text, VStack} from '@chakra-ui/react'
+import {Badge, Box, Heading, Stack, Text, VStack} from '@chakra-ui/react'
 import Head from 'next/head'
 
 export default function Home() {
   return (
-    <Container>
+    <>
       <Head>
         <title>Effective Open Source</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Flex as="main" minH="100vh" align="center" justify="center">
+      <Box
+        as="main"
+        w="full"
+        py={12}
+        mx="auto"
+        maxW="60ch"
+        px={{base: 2, md: 6}}
+      >
         <Stack spacing={12}>
           <VStack>
             <Text>🌱</Text>
@@ -55,7 +62,7 @@ export default function Home() {
             </Stack>
           </Stack>
         </Stack>
-      </Flex>
-    </Container>
+      </Box>
+    </>
   )
 }
