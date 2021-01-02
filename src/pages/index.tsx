@@ -29,7 +29,7 @@ export default function Home() {
             </Text>
           </VStack>
           <Stack spacing={3}>
-            <Heading as="h2" fontSize="2xl">
+            <Heading as="h2" fontSize={{base: 'lg', md: '2xl'}}>
               Content Thesis <Badge colorScheme="purple">Rough Draft</Badge>
             </Heading>
             <Stack>
