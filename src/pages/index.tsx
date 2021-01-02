@@ -12,7 +12,8 @@ export default function Home() {
       <Flex as="main" minH="100vh" align="center" justify="center">
         <Stack spacing={12}>
           <VStack>
-            <Heading as="h1">🌱 effectiveopensource.dev 🌱</Heading>
+            <Text>🌱</Text>
+            <Heading as="h1">effectiveopensource.dev</Heading>
             <Text textAlign="center">
               The future home of a digital garden for growing effective open
               source stewardship ideas.
