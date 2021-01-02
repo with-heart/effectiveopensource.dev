@@ -23,7 +23,7 @@ export default function Home() {
           </VStack>
           <Stack spacing={3}>
             <Heading as="h2" fontSize="2xl">
-              Content Thesis (Rough Draft)
+              Content Thesis <Badge colorScheme="purple">Rough Draft</Badge>
             </Heading>
             <Stack>
               <Text>

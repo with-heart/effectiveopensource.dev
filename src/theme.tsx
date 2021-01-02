@@ -16,4 +16,11 @@ export const theme = extendTheme({
     '8xl': '8rem',
     '9xl': '9rem',
   },
+  components: {
+    Badge: {
+      baseStyle: {
+        textTransform: 'none',
+      },
+    },
+  },
 })
