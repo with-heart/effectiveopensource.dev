@@ -13,7 +13,9 @@ export default function Home() {
         <Stack spacing={12}>
           <VStack>
             <Text>🌱</Text>
-            <Heading as="h1">effectiveopensource.dev</Heading>
+            <Heading as="h1" fontSize={{base: '2xl', md: '3xl'}}>
+              effectiveopensource.dev
+            </Heading>
             <Text textAlign="center">
               The future home of a digital garden for growing effective open
               source stewardship ideas.
