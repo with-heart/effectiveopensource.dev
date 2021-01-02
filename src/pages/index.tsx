@@ -1,5 +1,6 @@
-import {Badge, Box, Heading, Stack, Text, VStack} from '@chakra-ui/react'
+import {Badge, Heading, Stack, Text, VStack} from '@chakra-ui/react'
 import Head from 'next/head'
+import Container from '../components/Container'
 
 export default function Home() {
   return (
@@ -9,15 +10,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Box
-        as="main"
-        w="full"
-        py={12}
-        mx="auto"
-        maxW="60ch"
-        px={{base: 2, md: 6}}
-      >
-        <Stack spacing={12}>
+      <Container spacing={12}>
+        <header>
           <VStack>
             <Text alignSelf="center" fontSize="4xl">
               🌱
@@ -30,6 +24,8 @@ export default function Home() {
               source stewardship ideas.
             </Text>
           </VStack>
+        </header>
+        <main>
           <Stack spacing={3}>
             <Heading as="h2" fontSize={{base: 'lg', md: '2xl'}}>
               Content Thesis <Badge colorScheme="purple">Rough Draft</Badge>
@@ -63,8 +59,8 @@ export default function Home() {
               </Text>
             </Stack>
           </Stack>
-        </Stack>
-      </Box>
+        </main>
+      </Container>
     </>
   )
 }
