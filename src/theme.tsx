@@ -1,4 +1,4 @@
-import {extendTheme} from '@chakra-ui/react'
+import {extendTheme, theme as defaultTheme} from '@chakra-ui/react'
 
 export const theme = extendTheme({
   styles: {
@@ -7,6 +7,10 @@ export const theme = extendTheme({
         fontSize: '1.125rem',
       },
     },
+  },
+  fonts: {
+    heading: `Inter, ${defaultTheme.fonts.heading}`,
+    body: `Inter, ${defaultTheme.fonts.body}`,
   },
   components: {
     Badge: {
