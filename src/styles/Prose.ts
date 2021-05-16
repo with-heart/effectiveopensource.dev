@@ -22,6 +22,18 @@ export const Prose = styled('div', {
   maxWidth: '60ch',
   fontSize: rem(16),
   lineHeight: round(28 / 16),
+  variants: {
+    centered: {
+      true: {
+        marginLeft: 'auto',
+        marginRight: 'auto',
+      },
+    },
+  },
+
+  defaultVariants: {
+    centered: true,
+  },
 
   /** text */
   p: {
