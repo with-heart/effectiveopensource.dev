@@ -1,8 +1,8 @@
 import {GetStaticPaths, GetStaticPropsContext} from 'next'
 import {MDXRemote, MDXRemoteSerializeResult} from 'next-mdx-remote'
-import {getAllContent, getContentBySlug} from '../../lib/content'
-import {markdownToHtml} from '../../lib/markdown'
-import {Lead, Prose} from '../../styles'
+import {ContentLayout} from '../layout/ContentLayout'
+import {getAllContent, getContentBySlug} from '../lib/content'
+import {markdownToHtml} from '../lib/markdown'
 
 interface StaticProps {
   content: MDXRemoteSerializeResult
@@ -15,13 +15,11 @@ interface StaticProps {
 
 interface Props extends StaticProps {}
 
-export default function BlogPage({content, meta}: Props) {
+export default function ContentPage({content, meta}: Props) {
   return (
-    <Prose centered css={{py: '$xxl'}}>
-      <h1>{meta.title}</h1>
-      <Lead>{meta.description}</Lead>
+    <ContentLayout meta={meta}>
       <MDXRemote {...content} />
-    </Prose>
+    </ContentLayout>
   )
 }
 
