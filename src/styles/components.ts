@@ -81,9 +81,24 @@ export const Stack = styled('div', {
 
 export const Container = styled('div', {
   width: '100%',
-  py: '$xxl',
   mx: 'auto',
   maxWidth: '60ch',
+  position: 'static',
+  variants: {
+    accent: {
+      true: {
+        '&::before': {
+          content: '""',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100vw',
+          height: 2,
+          backgroundColor: '$accentSolid',
+        },
+      },
+    },
+  },
 })
 
 export const Text = styled('p', {
@@ -122,5 +137,20 @@ export const Heading = styled('h1', {
       right: {textAlign: 'right'},
       justify: {textAlign: 'justify'},
     },
+  },
+})
+
+export const AccentClip = styled('div', {
+  backgroundColor: '$accentSolid',
+  color: 'transparent',
+  variants: {
+    clip: {
+      text: {
+        backgroundClip: 'text',
+      },
+    },
+  },
+  defaultVariants: {
+    clip: 'text',
   },
 })

@@ -9,7 +9,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Container>
+      <Container accent css={{py: '$xxl'}}>
         <Stack direction="vertical" spacing="lg">
           <header>
             <Stack direction="vertical" spacing="xs">
@@ -21,7 +21,7 @@ export default function Home() {
                   color: '$gray900',
                 }}
               >
-                effectiveopensource.dev
+                Effective Open Source
               </Heading>
               <Text
                 align="center"
