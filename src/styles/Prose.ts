@@ -16,7 +16,7 @@ export const Lead = styled('p', {
   marginBottom: em(24, 20),
 })
 
-export const Prose = styled('div', {
+export const Prose = styled('article', {
   $$listCounterStyle: 'decimal',
   color: '$text',
   maxWidth: '60ch',
