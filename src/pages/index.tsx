@@ -54,7 +54,7 @@ export default function Home() {
               <Text>🌱</Text>
             </Stack>
           </div>
-          <Prose color="pink">
+          <Prose as="article" color="pink">
             <h1>Content Thesis</h1>
             <Text>
               Hello, I'm Mark Chandler. I'm a software engineer and open source
