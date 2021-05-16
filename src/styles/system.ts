@@ -130,9 +130,7 @@ export const {styled, css, global, keyframes, theme, getCssString} = createCss({
       paddingLeft: value,
       paddingRight: value,
     }),
-    py: (config) => (
-      value: `$${keyof typeof config['theme']['space'] | (string & {})}`,
-    ) => ({
+    py: (config) => (value: `$${keyof typeof config['theme']['space']}`) => ({
       paddingTop: value,
       paddingBottom: value,
     }),
