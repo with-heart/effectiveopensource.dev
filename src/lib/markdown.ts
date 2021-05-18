@@ -1,3 +1,3 @@
-import {serialize} from 'next-mdx-remote/serialize'
+import {bundleMDX} from 'mdx-bundler'
 
-export const markdownToHtml = (source: string) => serialize(source)
+export const compileMarkdown = async (source: string) => await bundleMDX(source)

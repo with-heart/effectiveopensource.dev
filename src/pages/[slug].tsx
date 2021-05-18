@@ -1,12 +1,13 @@
+import {getMDXComponent} from 'mdx-bundler/client'
 import {GetStaticPaths, GetStaticPropsContext} from 'next'
-import {MDXRemote, MDXRemoteSerializeResult} from 'next-mdx-remote'
+import {useMemo} from 'react'
 import {ContentLayout} from '../layout/ContentLayout'
 import {getAllContent, getContentBySlug} from '../lib/content'
-import {markdownToHtml} from '../lib/markdown'
+import {compileMarkdown} from '../lib/markdown'
 
 interface StaticProps {
-  content: MDXRemoteSerializeResult
-  meta: {
+  code: string
+  frontmatter: {
     title: string
     description: string
     [key: string]: any
@@ -15,10 +16,11 @@ interface StaticProps {
 
 interface Props extends StaticProps {}
 
-export default function ContentPage({content, meta}: Props) {
+export default function ContentPage({code, frontmatter}: Props) {
+  const Component = useMemo(() => getMDXComponent(code), [code])
   return (
-    <ContentLayout meta={meta}>
-      <MDXRemote {...content} />
+    <ContentLayout frontmatter={frontmatter}>
+      <Component />
     </ContentLayout>
   )
 }
@@ -40,13 +42,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps = async (context: GetStaticPropsContext) => {
   const slug = context.params!.slug as string
-  const doc = await getContentBySlug(slug)
-  const content = await markdownToHtml(doc.content || '')
+  const content = await getContentBySlug(slug)
+  const {code, frontmatter} = await compileMarkdown(content)
 
   return {
-    props: {
-      ...doc,
-      content,
-    },
+    props: {code, frontmatter},
   }
 }

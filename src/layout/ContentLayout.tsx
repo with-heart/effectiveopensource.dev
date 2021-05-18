@@ -4,16 +4,16 @@ import {Container, Heading, Lead, Prose, Stack} from '../styles'
 import {AccentClip} from '../styles/components'
 
 export const ContentLayout = ({
-  meta,
+  frontmatter,
   children,
 }: {
   children: ReactNode
-  meta: {
+  frontmatter: {
     title: string
     description: string
   }
 }) => {
-  const title = `${meta.title} | Effective Open Source`
+  const title = `${frontmatter.title} | Effective Open Source`
   return (
     <>
       <Head>
@@ -28,8 +28,8 @@ export const ContentLayout = ({
           </header>
           <main>
             <Prose centered>
-              <h1>{meta.title}</h1>
-              <Lead>{meta.description}</Lead>
+              <h1>{frontmatter.title}</h1>
+              <Lead>{frontmatter.description}</Lead>
               {children}
             </Prose>
           </main>

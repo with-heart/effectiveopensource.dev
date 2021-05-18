@@ -10,7 +10,7 @@ export default function Home() {
       </Head>
 
       <Container accent css={{py: '$xxl'}}>
-        <Stack direction="vertical" spacing="lg">
+        <Stack direction="vertical" spacing="lg" css={{mx: '$sm'}}>
           <header>
             <Stack direction="vertical" spacing="xs">
               <Heading
