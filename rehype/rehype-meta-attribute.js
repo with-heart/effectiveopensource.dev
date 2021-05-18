@@ -8,9 +8,10 @@ export default function rehypeMetaAttribute(options = {}) {
   }
 
   function visitor(node, index, parentNode) {
-    if (node.tagName !== 'code' || !node.data || !node.data.meta) return
-
     let match
+
+    if (node.tagName !== 'code' || !node.data?.meta) return
+
     re.lastIndex = 0
 
     while ((match = re.exec(node.data.meta))) {
