@@ -10,6 +10,7 @@
   "dependencies": {
     "@fontsource/newsreader": "^4.3.0",
     "@fontsource/source-code-pro": "^4.3.0",
+    "@silvenon/remark-smartypants": "^1.0.0",
     "@stitches/react": "^0.1.9",
     "hast-util-to-html": "^8.0.0",
     "hast-util-to-string": "^1.0.4",

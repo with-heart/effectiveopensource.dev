@@ -1,3 +1,4 @@
+import smartypants from '@silvenon/remark-smartypants'
 import {bundleMDX} from 'mdx-bundler'
 import path from 'path'
 import rehypeHighlightCode from '../../rehype/rehype-highlight-code'
@@ -19,6 +20,7 @@ export const compileMarkdown = async (source: string) => {
         rehypeMetaAttribute,
         rehypeHighlightCode,
       ]
+      options.remarkPlugins = [...(options.remarkPlugins ?? []), smartypants]
       return options
     },
   })
