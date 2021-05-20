@@ -2,9 +2,10 @@ import {global} from './system'
 
 export const globalStyles = global({
   html: {
-    fontSize: '1.5rem',
+    fontSize: '1.25rem',
     lineHeight: 1.5,
     textRendering: 'optimizeLegibility',
+    '@sm': {fontSize: '1.5rem'},
   },
   body: {
     margin: 0,
