@@ -90,8 +90,9 @@ export const Stack = styled('div', {
 export const Container = styled('div', {
   width: '100%',
   mx: 'auto',
-  maxWidth: '60ch',
+  maxWidth: '50ch',
   position: 'static',
+
   variants: {
     accent: {
       true: {

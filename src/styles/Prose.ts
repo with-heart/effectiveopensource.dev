@@ -19,9 +19,10 @@ export const Lead = styled('p', {
 export const Prose = styled('article', {
   $$listCounterStyle: 'decimal',
   color: '$text',
-  maxWidth: '60ch',
   fontSize: rem(16),
   lineHeight: round(28 / 16),
+  overflowWrap: 'break-word',
+
   variants: {
     centered: {
       true: {
@@ -133,7 +134,6 @@ export const Prose = styled('article', {
   pre: {
     color: '$preText',
     backgroundColor: '$preBg',
-    overflowX: 'auto',
     fontSize: em(14, 16),
     lineHeight: round(24 / 14),
     marginTop: em(24, 14),
