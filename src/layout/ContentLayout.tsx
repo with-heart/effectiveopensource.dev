@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import {ReactNode} from 'react'
 import {Container, Heading, Lead, Prose, Stack} from '../styles'
 import {AccentClip} from '../styles/components'
@@ -22,9 +23,13 @@ export const ContentLayout = ({
       <Container accent css={{py: '$sm'}}>
         <Stack spacing="xxl">
           <header>
-            <Heading as="h1" size="md">
-              <AccentClip as="span">🌱</AccentClip> Effective Open Source
-            </Heading>
+            <Link href="/">
+              <a>
+                <Heading as="h1" size="md">
+                  <AccentClip as="span">🌱</AccentClip> Effective Open Source
+                </Heading>
+              </a>
+            </Link>
           </header>
           <main>
             <Prose centered>
