@@ -22,7 +22,18 @@ export const ContentLayout = ({
       <Head>
         <title>{title}</title>
       </Head>
-      <Container accent css={{py: '$sm'}}>
+      <Container
+        accent
+        css={{
+          py: '$sm',
+          '@initial': {
+            px: '$sm',
+          },
+          '@lg': {
+            px: '$none',
+          },
+        }}
+      >
         <Stack spacing="xxl">
           <header>
             <Link href="/">
