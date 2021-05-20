@@ -86,6 +86,15 @@ export const Pre = styled('pre', {
     backgroundColor: '$$highlightWord',
   },
 
+  '.language-md': {
+    '.token.bold .token.content': {
+      fontWeight: '$heaviest',
+    },
+    '.token.italic .token.content': {
+      fontStyle: 'italic',
+    },
+  },
+
   variants: {
     showLineNumbers: {
       true: {
@@ -142,6 +151,12 @@ export const Pre = styled('pre', {
         $$tokenTag: 'rgb(127, 219, 202)',
         $$tokenUrl: 'rgb(173, 219, 103)',
         $$tokenVariable: 'rgb(214, 222, 235)',
+
+        '.language-md': {
+          '.token.content': {
+            color: '$$text',
+          },
+        },
       },
     },
   },
