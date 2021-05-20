@@ -74,6 +74,11 @@ export const {styled, css, global, keyframes, theme, getCssString} = createCss({
         '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
     },
   },
+  media: {
+    sm: '(min-width: 640px)',
+    md: '(min-width: 768px)',
+    lg: '(min-width: 1024px)',
+  },
   utils: {
     m:
       (config) =>
