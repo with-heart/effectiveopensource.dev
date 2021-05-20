@@ -20,7 +20,9 @@ const rehypeHighlightCode = (options = {}) => {
   }
 
   function visitor(node, index, parentNode) {
-    if (parentNode.tagName !== 'pre' && node.tagName !== 'code') return
+    if (parentNode.tagName !== 'pre' || node.tagName !== 'code') {
+      return
+    }
 
     const lang = node.properties.className
       ? node.properties.className[0].split('-')[1]
