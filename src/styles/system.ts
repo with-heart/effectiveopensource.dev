@@ -3,9 +3,11 @@ import {
   blue,
   emerald,
   gray,
+  green,
   indigo,
   paletteToScaledColors,
   pink,
+  red,
   violet,
 } from './color-palettes'
 
@@ -41,7 +43,10 @@ export const {styled, css, global, keyframes, theme, getCssString} = createCss({
       ...paletteToScaledColors(blue, 'blue'),
       ...paletteToScaledColors(indigo, 'indigo'),
       ...paletteToScaledColors(emerald, 'emerald'),
+      ...paletteToScaledColors(green, 'green'),
       ...paletteToScaledColors(pink, 'pink'),
+      ...paletteToScaledColors(red, 'red'),
+      white: 'rgba(255, 255, 255, 1)',
       accentLight: '$gray200',
       accentSolid: '$gray900',
       accentText: '$gray900',

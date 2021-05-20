@@ -4,6 +4,7 @@ import {useMemo} from 'react'
 import {ContentLayout} from '../layout/ContentLayout'
 import {getAllContent, getContentBySlug} from '../lib/content'
 import {compileMarkdown} from '../lib/markdown'
+import {Pre} from '../styles/Pre'
 
 interface StaticProps {
   code: string
@@ -20,7 +21,11 @@ export default function ContentPage({code, frontmatter}: Props) {
   const Component = useMemo(() => getMDXComponent(code), [code])
   return (
     <ContentLayout frontmatter={frontmatter}>
-      <Component />
+      <Component
+        components={{
+          pre: Pre,
+        }}
+      />
     </ContentLayout>
   )
 }
@@ -45,7 +50,5 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
   const content = await getContentBySlug(slug)
   const {code, frontmatter} = await compileMarkdown(content)
 
-  return {
-    props: {code, frontmatter},
-  }
+  return {props: {code, frontmatter}}
 }

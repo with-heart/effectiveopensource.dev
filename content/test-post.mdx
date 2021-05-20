@@ -17,18 +17,16 @@ description: A test post that is about some stuff and things.
 
   Can you believe it? ANOTHER paragraph!
 
+```diff
+- let string = "hello"
++ const string = "hello"
+```
+
 ```jsx
 import React from 'react'
 
 function Hello() {
-  return <h1>Hello world</h1>
-}
-```
-
-```jsx theme=pink
-import React from 'react'
-
-function Hello() {
+  // return something good
   return <h1>Hello world</h1>
 }
 ```
@@ -65,7 +63,7 @@ function Hello() {
 }
 ```
 
-```html showLineNumbers
+```html showLineNumbers=true
 <div>
   <h1>Hello world</h1>
   <p>This is a code block example.</p>
