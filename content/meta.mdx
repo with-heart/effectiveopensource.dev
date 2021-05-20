@@ -1,0 +1,160 @@
+---
+title: 'Meta'
+description:
+  'Celebrating the (mostly) open source technology behind
+  effectiveopensource.dev'
+---
+
+This page is titled "Meta" because its purpose is to explore the technologies
+that power the effectiveopensource.dev site. Not all of these technologies are
+open source (like Vercel), but those that aren't are still near and dear to the
+open source community.
+
+Did you know that effectiveopensource.dev is itself an open source project?
+Check out our code at
+[github.com/with-heart/effectiveopensource.dev](https://github.com/with-heart/effectiveopensource.dev)!
+
+## Writing
+
+- [Markdown]
+
+  Markdown is a lightweight markup language that allows you to add element
+  formatting to plaintext documents.
+
+  ```md
+  # This is an h1 heading
+
+  ## This is an h2 heading
+
+  [This sentence will be a link to Google](https://google.com/)
+
+  How about some **bold** and _italic_ text?
+
+  - Markdown is great for making lists!
+    - You can even nest them!
+  - Have another item
+    - And another nested thing
+  ```
+
+  Markdown is the language of open source. It's easy to read and easy to write.
+
+  We use it to write our READMEs. We use it to write issues, pull requests, and
+  comments. Heck, this post is written in Markdown!
+
+  Reading and writing Markdown is an essential soft skill in the open source
+  world. If you can't speak it, I highly recommend that you [invest time into
+  learning how][markdownguide]!
+
+- [MDX]
+
+  If Markdown is the language of open source then MDX is its most advanced
+  dialect.
+
+  MDX allows authors to write JSX in their Markdown documents, providing a large
+  amount of power over customizing the document output.
+
+- [Unified]
+
+  Unified is a unified collective of packages that compile content to syntax
+  trees and syntax trees to content.
+
+  This is powerful because we can write utilities and plugins that manipulate
+  the syntax tree in order to effect change in the content.
+
+  Even better is that Unified and MDX play well together, allowing us to modify
+  our Markdown documents with Unified.
+
+  As an example, the code blocks on effectiveopensource.dev are written in
+  Markdown, connected to MDX, and manipulated by [rehype] (a library in the
+  Unified collective) in order to add line numbers, syntax highlighting,
+  individual word highlighting, and more!
+
+  ```jsx line=3 showLineNumbers=true
+  function hello() {
+    // I'm a comment
+    const variable = "I'm on the highlighted line!"
+    return variable
+  }
+  ```
+
+  Speaking of the code blocks, huge shout-out to [Pedro Duarte][pedro] for his
+  post ["Code blocks, but better"][bettercodeblocks] which serves as the
+  foundation for our code blocks.
+
+## Styling
+
+- [`@stitches/react`](https://stitches.dev/)
+
+  Stitches is the CSS-in-JS library used to style the components that render
+  this site.
+
+  I chose Stitches because:
+
+  - it features near-zero runtime and SSR support, which means the styles are
+    almost entirely pre-generated so you're only served the bare minimum styles
+    needed for each page
+  - it allows you to roll your own theme-powered style system from scratch
+  - its `variants` api is excellent; [Boolean Variants][booleanvariants] are my
+    favorite feature!
+    - for more info on variants, check out another awesome post by Pedro Duarte:
+      [ "Variant-driven Components"][variantdrivencomponents]
+
+  I also want to mention [TailwindCSS][tailwindcss] here because I built a
+  `Prose` component using Stitches that is partially a clone of the [TailwindCSS
+  Typography][tailwindtypography] `prose` styles.
+
+- [Night Owl][nightowl]
+
+  Our code block theme is a modified version of the open source Night Owl theme
+  created by [Sarah Drasner][sdras].
+
+  ```ts
+  const isThemeAwesome = (theme: {name: string}) => {
+    return theme.name === 'nightOwl'
+  }
+  ```
+
+## Fonts
+
+The fonts used on effectiveopensource.dev:
+
+- Heading: [Newsreader]
+- Body: Your operating system's UI font
+- Monospace: [Source Code Pro][sourcecodepro]
+
+The non-system fonts are imported using [Fontsource], an open source solution
+for self-hosting open source fonts.
+
+## Code
+
+- React
+- NextJS
+- [Visual Studio Code][vsc]
+
+  This site is Code. This document is Code. The world is Code.
+
+## Deployment
+
+- Vercel
+- GitHub Actions
+
+[fontsource]: https://fontsource.org/
+[markdown]: https://daringfireball.net/projects/markdown/
+[markdownguide]: https://www.markdownguide.org/
+[mdx]: https://mdxjs.com/
+[unified]: https://unifiedjs.com/
+[bettercodeblocks]: https://ped.ro/blog/code-blocks-but-better
+[variantdrivencomponents]: https://ped.ro/blog/variant-driven-components
+[pedro]: https://ped.ro/
+[rehype]: https://github.com/rehypejs/rehype
+[tailwindcss]: https://tailwindcss.com/
+[tailwindtypography]: https://github.com/tailwindlabs/tailwindcss-typography
+[booleanvariants]: https://stitches.dev/docs/variants#boolean-variants
+[newsreader]:
+  https://fonts.google.com/specimen/Newsreader?preview.text=effectiveopensource.dev&preview.text_type=custom
+[sourcecodepro]:
+  https://fonts.google.com/specimen/Source+Code+Pro?preview.text=effectiveopensource.dev&preview.text_type=custom
+[vsc]: https://code.visualstudio.com/
+[react]: https://reactjs.org/
+[nightowl]: https://marketplace.visualstudio.com/items?itemName=sdras.night-owl
+[sdras]: https://sarahdrasnerdesign.com/
