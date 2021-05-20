@@ -114,6 +114,16 @@
   dependencies:
     esbuild "^0.8.40"
 
+"@fontsource/newsreader@^4.3.0":
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/newsreader/-/newsreader-4.3.0.tgz#8a53ecc46ed423187ae9175f24f74ab8762e7579"
+  integrity sha512-zHK+6SMCvcSy8NoNXIAUxmCZxyfKjmMdw8mdACKQSl9A4SeHhjLUuQTeS+uE0/IX4yv48ijZhH5DCSVcuONHaw==
+
+"@fontsource/source-code-pro@^4.3.0":
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/@fontsource/source-code-pro/-/source-code-pro-4.3.0.tgz#bd4a3d93fffb47d11ac33c1e09b54d78b31217d5"
+  integrity sha512-Yqz4N/JnoYGvkbKT6b5npujUwyP24UnDWBQ2zWbpXncUBZ6pKESLr7G72VPGGTDUMpMmLpuigVWjmbfRKObLLg==
+
 "@hapi/accept@5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@hapi/accept/-/accept-5.0.1.tgz#068553e867f0f63225a506ed74e899441af53e10"

@@ -1,8 +1,6 @@
-import {newsreader} from './font-faces'
 import {global} from './system'
 
 export const globalStyles = global({
-  '@font-face': [...newsreader],
   html: {
     fontSize: '1.5rem',
     lineHeight: 1.5,

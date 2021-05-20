@@ -12,7 +12,7 @@ import {
 export const {styled, css, global, keyframes, theme, getCssString} = createCss({
   theme: {
     fonts: {
-      heading: 'Newsreader, serif',
+      heading: 'NewsreaderVariable, Newsreader, serif',
       body: "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       monospace:
         'Source Code Pro, ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace',
