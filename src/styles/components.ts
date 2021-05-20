@@ -40,6 +40,14 @@ export const Flex = styled('div', {
   },
 })
 
+export const Footer = styled('footer', {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  py: '$xs',
+})
+
 export const Stack = styled('div', {
   display: 'flex',
   flexDirection: 'column',
@@ -116,6 +124,9 @@ export const Text = styled('p', {
       center: {textAlign: 'center'},
       right: {textAlign: 'right'},
       justify: {textAlign: 'justify'},
+    },
+    underline: {
+      true: {textDecoration: 'underline'},
     },
   },
 })

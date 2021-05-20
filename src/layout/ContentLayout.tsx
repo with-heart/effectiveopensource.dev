@@ -1,8 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import {ReactNode} from 'react'
+import {DigitalGardenNotice} from '../components/DigitalGardenNotice'
+import {Seedlings} from '../components/Seedlings'
 import {Container, Heading, Lead, Prose, Stack} from '../styles'
-import {AccentClip} from '../styles/components'
+import {AccentClip, Footer} from '../styles/components'
 
 export const ContentLayout = ({
   frontmatter,
@@ -38,6 +40,14 @@ export const ContentLayout = ({
               {children}
             </Prose>
           </main>
+          <div>
+            <Stack spacing="lg">
+              <Seedlings size="lg" />
+              <Footer>
+                <DigitalGardenNotice />
+              </Footer>
+            </Stack>
+          </div>
         </Stack>
       </Container>
     </>
