@@ -16,103 +16,103 @@ Check out our code at
 
 ## Writing
 
-- [Markdown]
+### [Markdown]
 
-  Markdown is a lightweight markup language that allows you to add element
-  formatting to plaintext documents.
+Markdown is a lightweight markup language that allows you to add element
+formatting to plaintext documents.
 
-  ```md
-  # This is an h1 heading
+```md
+# This is an h1 heading
 
-  ## This is an h2 heading
+## This is an h2 heading
 
-  [This sentence will be a link to Google](https://google.com/)
+[A link to Google](https://google.com/)
 
-  How about some **bold** and _italic_ text?
+How about some **bold** and _italic_ text?
 
-  - Markdown is great for making lists!
-    - You can even nest them!
-  - Have another item
-    - And another nested thing
-  ```
+- Markdown is great for making lists!
+  - You can even nest them!
+- Have another item
+  - And another nested thing
+```
 
-  Markdown is the language of open source. It's easy to read and easy to write.
+Markdown is the language of open source. It's easy to read and easy to write.
 
-  We use it to write our READMEs. We use it to write issues, pull requests, and
-  comments. Heck, this post is written in Markdown!
+We use it to write our READMEs. We use it to write issues, pull requests, and
+comments. Heck, this post is written in Markdown!
 
-  Reading and writing Markdown is an essential soft skill in the open source
-  world. If you can't speak it, I highly recommend that you [invest time into
-  learning how][markdownguide]!
+Reading and writing Markdown is an essential soft skill in the open source
+world. If you can't speak it, I highly recommend that you [invest time into
+learning how][markdownguide]!
 
-- [MDX]
+### [`mdx`][mdx]
 
-  If Markdown is the language of open source then MDX is its most advanced
-  dialect.
+If Markdown is the language of open source then MDX is its most advanced
+dialect.
 
-  MDX allows authors to write JSX in their Markdown documents, providing a large
-  amount of power over customizing the document output.
+MDX allows authors to write JSX in their Markdown documents, providing a large
+amount of power over customizing the document output.
 
-- [Unified]
+### [Unified]
 
-  Unified is a unified collective of packages that compile content to syntax
-  trees and syntax trees to content.
+Unified is a unified collective of packages that compile content to syntax trees
+and syntax trees to content.
 
-  This is powerful because we can write utilities and plugins that manipulate
-  the syntax tree in order to effect change in the content.
+This is powerful because we can write utilities and plugins that manipulate the
+syntax tree in order to effect change in the content.
 
-  Even better is that Unified and MDX play well together, allowing us to modify
-  our Markdown documents with Unified.
+Even better is that Unified and MDX play well together, allowing us to modify
+our Markdown documents with Unified.
 
-  As an example, the code blocks on effectiveopensource.dev are written in
-  Markdown, connected to MDX, and manipulated by [rehype] (a library in the
-  Unified collective) in order to add line numbers, syntax highlighting,
-  individual word highlighting, and more!
+As an example, the code blocks on effectiveopensource.dev are written in
+Markdown, connected to MDX, and manipulated by [rehype] (a library in the
+Unified collective) in order to add line numbers, syntax highlighting,
+individual word highlighting, and more!
 
-  ```jsx line=3 showLineNumbers=true
-  function hello() {
-    // I'm a comment
-    const variable = "I'm on the highlighted line!"
-    return variable
-  }
-  ```
+```jsx line=3 showLineNumbers=true
+function hello() {
+  // I'm a comment
+  const variable = "I'm on the highlighted line!"
+  return variable
+}
+```
 
-  Speaking of the code blocks, huge shout-out to [Pedro Duarte][pedro] for his
-  post ["Code blocks, but better"][bettercodeblocks] which serves as the
-  foundation for our code blocks.
+Speaking of the code blocks, huge shout-out to [Pedro Duarte][pedro] for his
+post ["Code blocks, but better"][bettercodeblocks] which serves as the
+foundation for our code blocks.
 
 ## Styling
 
-- [`@stitches/react`](https://stitches.dev/)
+### [`@stitches/react`][stitches]
 
-  Stitches is the CSS-in-JS library used to style the components that render
-  this site.
+Stitches is the CSS-in-JS library used to style the components that render this
+site.
 
-  I chose Stitches because:
+I chose Stitches because:
 
-  - it features near-zero runtime and SSR support, which means the styles are
-    almost entirely pre-generated so you're only served the bare minimum styles
-    needed for each page
-  - it allows you to roll your own theme-powered style system from scratch
-  - its `variants` api is excellent; [Boolean Variants][booleanvariants] are my
-    favorite feature!
-    - for more info on variants, check out another awesome post by Pedro Duarte:
-      [ "Variant-driven Components"][variantdrivencomponents]
+- it features near-zero runtime and SSR support, which means the styles are
+  almost entirely pre-generated so you're only served the bare minimum styles
+  needed for each page
+- it allows you to roll your own theme-powered style system from scratch
+- its `variants` api is excellent; [Boolean Variants][booleanvariants] are my
+  favorite feature!
+  - for more info on variants, check out another awesome post by Pedro Duarte: [
+    "Variant-driven Components"][variantdrivencomponents]
 
-  I also want to mention [TailwindCSS][tailwindcss] here because I built a
-  `Prose` component using Stitches that is partially a clone of the [TailwindCSS
-  Typography][tailwindtypography] `prose` styles.
+I also want to mention [TailwindCSS][tailwindcss] here because I built a `Prose`
+component using Stitches that is partially a clone of the [TailwindCSS
+Typography][tailwindtypography] `prose` styles.
 
-- [Night Owl][nightowl]
+### [Night Owl][nightowl]
 
-  Our code block theme is a modified version of the open source Night Owl theme
-  created by [Sarah Drasner][sdras].
+Our code block theme is a modified version of the open source Night Owl theme
+created by [Sarah Drasner][sdras].
 
-  ```ts
-  const isThemeAwesome = (theme: {name: string}) => {
-    return theme.name === 'nightOwl'
-  }
-  ```
+```ts
+const isThemeAwesome = (theme: {name: string}) => {
+  return theme.name === 'nightOwl'
+}
+```
 
 ## Fonts
 
@@ -127,17 +127,21 @@ for self-hosting open source fonts.
 
 ## Code
 
-- React
-- NextJS
-- [Visual Studio Code][vsc]
+### React
 
-  This site is Code. This document is Code. The world is Code.
+### NextJS
+
+### [Visual Studio Code][vsc]
+
+This site is Code. This document is Code. The world is Code.
 
 ## Deployment
 
-- Vercel
-- GitHub Actions
+### Vercel
 
+### GitHub Actions
+
+[stitches]: https://stitches.dev/
 [fontsource]: https://fontsource.org/
 [markdown]: https://daringfireball.net/projects/markdown/
 [markdownguide]: https://www.markdownguide.org/
