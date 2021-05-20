@@ -1,13 +1,16 @@
 import nodeToString from 'hast-util-to-string'
 import rangeParser from 'parse-numeric-range'
 import {refractor} from 'refractor'
-import markdown from 'refractor/lang/markdown'
+import diff from 'refractor/lang/diff'
+import json from 'refractor/lang/json'
 import jsx from 'refractor/lang/jsx'
-import {Plugin} from 'unified'
-import {visit, Visitor} from 'unist-util-visit'
+import markdown from 'refractor/lang/markdown'
+import {visit} from 'unist-util-visit'
 import highlightLine from './rehype-highlight-line'
 import highlightWord from './rehype-highlight-word'
 
+refractor.register(diff)
+refractor.register(json)
 refractor.register(jsx)
 refractor.register(markdown)
 
