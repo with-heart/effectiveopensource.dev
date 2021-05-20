@@ -5,6 +5,7 @@ import diff from 'refractor/lang/diff'
 import json from 'refractor/lang/json'
 import jsx from 'refractor/lang/jsx'
 import markdown from 'refractor/lang/markdown'
+import typescript from 'refractor/lang/typescript'
 import {visit} from 'unist-util-visit'
 import highlightLine from './rehype-highlight-line'
 import highlightWord from './rehype-highlight-word'
@@ -13,6 +14,7 @@ refractor.register(diff)
 refractor.register(json)
 refractor.register(jsx)
 refractor.register(markdown)
+refractor.register(typescript)
 
 const rehypeHighlightCode = (options = {}) => {
   return (tree) => {
