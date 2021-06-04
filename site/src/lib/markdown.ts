@@ -1,3 +1,4 @@
+import {findRootSync} from '@manypkg/find-root'
 import smartypants from '@silvenon/remark-smartypants'
 import {bundleMDX} from 'mdx-bundler'
 import path from 'path'
@@ -5,7 +6,8 @@ import rehypeHighlightCode from '../../rehype/rehype-highlight-code'
 import rehypeMetaAttribute from '../../rehype/rehype-meta-attribute'
 
 process.env.ESBUILD_BINARY_PATH = path.join(
-  process.cwd(),
+  // point to root `node_modules` since this project uses yarn workspaces
+  findRootSync(process.cwd()),
   'node_modules',
   'esbuild',
   'bin',
