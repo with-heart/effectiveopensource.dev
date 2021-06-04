@@ -8,6 +8,7 @@
     "site"
   ],
   "scripts": {
+    "build": "preconstruct build && manypkg run site build",
     "postinstall": "preconstruct dev",
     "start": "manypkg run site dev"
   },
