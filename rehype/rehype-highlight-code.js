@@ -1,4 +1,4 @@
-const toText = require('hast-util-to-text')
+const toString = require('hast-util-to-string')
 const refractor = require('refractor')
 const diff = require('refractor/lang/diff')
 const json = require('refractor/lang/json')
@@ -29,7 +29,7 @@ const rehypeHighlightCode = (options = {}) => {
     const lang = node.properties.className
       ? node.properties.className[0].split('-')[1]
       : 'md'
-    let result = refractor.highlight(toText(node), lang)
+    let result = refractor.highlight(toString(node), lang)
 
     const linesToHighlight = rangeParser(node.properties.line || '0')
     result = highlightLine(result, linesToHighlight)
