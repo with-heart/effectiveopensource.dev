@@ -13,6 +13,7 @@
     "start": "manypkg run site dev"
   },
   "dependencies": {
+    "@babel/preset-env": "^7.14.4",
     "@manypkg/cli": "^0.18.0",
     "@preconstruct/cli": "^2.1.0"
   },
