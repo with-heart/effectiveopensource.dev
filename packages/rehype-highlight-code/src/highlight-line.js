@@ -115,4 +115,4 @@ const rehypeHighlightLine = (ast, lines) => {
   return wrapLines(numbered, lines)
 }
 
-module.exports = rehypeHighlightLine
+export default rehypeHighlightLine

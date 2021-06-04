@@ -5,7 +5,7 @@ const visit = require('unist-util-visit')
 
 const CALLOUT = /__(.*?)__/g
 
-module.exports = function rehypeHighlightWord(code) {
+export default function rehypeHighlightWord(code) {
   const html = toHtml(code)
   const result = html.replace(
     CALLOUT,
