@@ -1,7 +1,7 @@
-import {toHtml} from 'hast-util-to-html'
-import {Node} from 'hast-util-to-html/lib'
-import parse from 'rehype-parse'
-import unified from 'unified'
+const toHtml = require('hast-util-to-html')
+const {Node} = require('hast-util-to-html/lib')
+const parse = require('rehype-parse')
+const unified = require('unified')
 
 const lineNumberify = (ast, lineNum = 1) => {
   let lineNumber = lineNum
@@ -115,4 +115,4 @@ const rehypeHighlightLine = (ast, lines) => {
   return wrapLines(numbered, lines)
 }
 
-export default rehypeHighlightLine
+module.exports = rehypeHighlightLine

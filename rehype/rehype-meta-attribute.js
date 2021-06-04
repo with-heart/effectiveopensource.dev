@@ -1,8 +1,8 @@
-import {visit} from 'unist-util-visit'
+const visit = require('unist-util-visit')
 
 const re = /\b([-\w]+)(?:=(?:"([^"]*)"|'([^']*)'|([^"'\s]+)))?/g
 
-export default function rehypeMetaAttribute(options = {}) {
+module.exports = function rehypeMetaAttribute(options = {}) {
   return (tree) => {
     visit(tree, 'element', visitor)
   }

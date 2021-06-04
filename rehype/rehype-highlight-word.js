@@ -1,11 +1,11 @@
-import visit from 'unist-util-visit'
-import {toHtml} from 'hast-util-to-html'
-import unified from 'unified'
-import parse from 'rehype-parse'
+const toHtml = require('hast-util-to-html')
+const parse = require('rehype-parse')
+const unified = require('unified')
+const visit = require('unist-util-visit')
 
 const CALLOUT = /__(.*?)__/g
 
-export default function rehypeHighlightWord(code) {
+module.exports = function rehypeHighlightWord(code) {
   const html = toHtml(code)
   const result = html.replace(
     CALLOUT,

@@ -13,17 +13,17 @@
     "@fontsource/source-code-pro": "^4.3.0",
     "@silvenon/remark-smartypants": "^1.0.0",
     "@stitches/react": "^0.1.9",
-    "hast-util-to-html": "^8.0.0",
-    "hast-util-to-string": "^1.0.4",
+    "hast-util-to-html": "^7.0.0",
+    "hast-util-to-text": "^2.0.0",
     "mdx-bundler": "^4.0.0",
     "next": "10.0.4",
     "parse-numeric-range": "^1.2.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "refractor": "^4.0.0",
+    "refractor": "^3.0.0",
     "rehype-parse": "^7.0.1",
     "unified": "^9.2.1",
-    "unist-util-visit": "^3.1.0"
+    "unist-util-visit": "^2.0.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.19",

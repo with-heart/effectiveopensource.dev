@@ -1,14 +1,14 @@
-import nodeToString from 'hast-util-to-string'
-import rangeParser from 'parse-numeric-range'
-import {refractor} from 'refractor'
-import diff from 'refractor/lang/diff'
-import json from 'refractor/lang/json'
-import jsx from 'refractor/lang/jsx'
-import markdown from 'refractor/lang/markdown'
-import typescript from 'refractor/lang/typescript'
-import {visit} from 'unist-util-visit'
-import highlightLine from './rehype-highlight-line'
-import highlightWord from './rehype-highlight-word'
+const toText = require('hast-util-to-text')
+const refractor = require('refractor')
+const diff = require('refractor/lang/diff')
+const json = require('refractor/lang/json')
+const jsx = require('refractor/lang/jsx')
+const markdown = require('refractor/lang/markdown')
+const typescript = require('refractor/lang/typescript')
+const rangeParser = require('parse-numeric-range')
+const visit = require('unist-util-visit')
+const highlightLine = require('./rehype-highlight-line')
+const highlightWord = require('./rehype-highlight-word')
 
 refractor.register(diff)
 refractor.register(json)
@@ -29,7 +29,7 @@ const rehypeHighlightCode = (options = {}) => {
     const lang = node.properties.className
       ? node.properties.className[0].split('-')[1]
       : 'md'
-    let result = refractor.highlight(nodeToString(node), lang)
+    let result = refractor.highlight(toText(node), lang)
 
     const linesToHighlight = rangeParser(node.properties.line || '0')
     result = highlightLine(result, linesToHighlight)
@@ -40,4 +40,4 @@ const rehypeHighlightCode = (options = {}) => {
   }
 }
 
-export default rehypeHighlightCode
+module.exports = rehypeHighlightCode
