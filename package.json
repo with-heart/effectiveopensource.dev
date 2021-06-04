@@ -4,12 +4,20 @@
   "private": true,
   "license": "MIT",
   "workspaces": [
+    "packages/*",
     "site"
   ],
   "scripts": {
+    "postinstall": "preconstruct dev",
     "start": "manypkg run site dev"
   },
   "dependencies": {
-    "@manypkg/cli": "^0.18.0"
+    "@manypkg/cli": "^0.18.0",
+    "@preconstruct/cli": "^2.1.0"
+  },
+  "preconstruct": {
+    "packages": [
+      "packages/*"
+    ]
   }
 }

@@ -1,0 +1,13 @@
+{
+  "name": "@effectiveopensource/rehype-meta-attribute",
+  "version": "0.0.0",
+  "main": "dist/effectiveopensource-rehype-meta-attribute.cjs.js",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "author": "Mark Chandler <github@chanchan.io>",
+  "dependencies": {
+    "unist-util-visit": "^2.0.0"
+  }
+}
