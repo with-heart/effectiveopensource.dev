@@ -31,7 +31,9 @@ export default class Document extends NextDocument {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <script async data-api="/_hive" src="/bee.js" />
+        </Head>
         <body>
           <Main />
           <NextScript />
