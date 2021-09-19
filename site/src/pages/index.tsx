@@ -31,8 +31,7 @@ export default function Home() {
                   fontFamily: '$heading',
                 }}
               >
-                A digital garden for growing effective open source knowledge and
-                ideas.
+                A digital garden of open source thinking and ideas.
               </Text>
             </Stack>
           </header>
