@@ -15,7 +15,7 @@
     "@fontsource/source-code-pro": "^4.3.0",
     "@manypkg/find-root": "^1.1.0",
     "@silvenon/remark-smartypants": "^1.0.0",
-    "@stitches/react": "^0.1.9",
+    "@stitches/react": "^1.2.0",
     "mdx-bundler": "^4.0.0",
     "next": "^11.0.0",
     "react": "17.0.1",

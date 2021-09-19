@@ -1,6 +1,6 @@
-import {theme} from './system'
+import {createTheme} from './system'
 
-export const pinkTheme = theme({
+export const pinkTheme = createTheme({
   colors: {
     accentLight: '$pink300',
     accentText: '$pink600',
@@ -11,7 +11,7 @@ export const pinkTheme = theme({
   },
 })
 
-export const emeraldTheme = theme({
+export const emeraldTheme = createTheme({
   colors: {
     accentLight: '$emerald300',
     accentText: '$emerald600',
@@ -21,7 +21,7 @@ export const emeraldTheme = theme({
   },
 })
 
-export const violetTheme = theme({
+export const violetTheme = createTheme({
   colors: {
     accentLight: '$violet300',
     accentText: '$violet600',

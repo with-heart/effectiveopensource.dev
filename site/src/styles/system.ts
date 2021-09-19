@@ -1,4 +1,5 @@
-import {createCss} from '@stitches/react'
+import type * as Stitches from '@stitches/react'
+import {createStitches} from '@stitches/react'
 import {
   blue,
   emerald,
@@ -11,7 +12,15 @@ import {
   violet,
 } from './color-palettes'
 
-export const {styled, css, global, keyframes, theme, getCssString} = createCss({
+export const {
+  styled,
+  css,
+  globalCss,
+  keyframes,
+  theme,
+  getCssText,
+  createTheme,
+} = createStitches({
   theme: {
     fonts: {
       heading: 'NewsreaderVariable, Newsreader, serif',
@@ -80,73 +89,49 @@ export const {styled, css, global, keyframes, theme, getCssString} = createCss({
     lg: '(min-width: 1024px)',
   },
   utils: {
-    m:
-      (config) =>
-      (value: `$${keyof typeof config['theme']['space'] | (string & {})}`) => ({
-        marginTop: value,
-        marginBottom: value,
-        marginLeft: value,
-        marginRight: value,
-      }),
-    mt:
-      (config) =>
-      (value: `$${keyof typeof config['theme']['space'] | (string & {})}`) => ({
-        marginTop: value,
-      }),
-    mr:
-      (config) =>
-      (value: `$${keyof typeof config['theme']['space'] | (string & {})}`) => ({
-        marginRight: value,
-      }),
-    mb:
-      (config) =>
-      (value: `$${keyof typeof config['theme']['space'] | (string & {})}`) => ({
-        marginBottom: value,
-      }),
-    ml:
-      (config) =>
-      (value: `$${keyof typeof config['theme']['space'] | (string & {})}`) => ({
-        marginLeft: value,
-      }),
-    mx:
-      (config) =>
-      (value: `$${keyof typeof config['theme']['space'] | (string & {})}`) => ({
-        marginLeft: value,
-        marginRight: value,
-      }),
-    my:
-      (config) =>
-      (value: `$${keyof typeof config['theme']['space'] | (string & {})}`) => ({
-        marginTop: value,
-        marginBottom: value,
-      }),
-    pt:
-      (config) =>
-      (value: `$${keyof typeof config['theme']['space'] | (string & {})}`) => ({
-        paddingTop: value,
-      }),
-    pr:
-      (config) =>
-      (value: `$${keyof typeof config['theme']['space'] | (string & {})}`) => ({
-        paddingRight: value,
-      }),
-    pb:
-      (config) =>
-      (value: `$${keyof typeof config['theme']['space'] | (string & {})}`) => ({
-        paddingBottom: value,
-      }),
-    pl:
-      (config) =>
-      (value: `$${keyof typeof config['theme']['space'] | (string & {})}`) => ({
-        paddingLeft: value,
-      }),
-    px:
-      (config) =>
-      (value: `$${keyof typeof config['theme']['space'] | (string & {})}`) => ({
-        paddingLeft: value,
-        paddingRight: value,
-      }),
-    py: (config) => (value: `$${keyof typeof config['theme']['space']}`) => ({
+    m: (value: Stitches.ScaleValue<'space'>) => ({
+      marginTop: value,
+      marginBottom: value,
+      marginLeft: value,
+      marginRight: value,
+    }),
+    mt: (value: Stitches.ScaleValue<'space'>) => ({
+      marginTop: value,
+    }),
+    mr: (value: Stitches.ScaleValue<'space'>) => ({
+      marginRight: value,
+    }),
+    mb: (value: Stitches.ScaleValue<'space'>) => ({
+      marginBottom: value,
+    }),
+    ml: (value: Stitches.ScaleValue<'space'>) => ({
+      marginLeft: value,
+    }),
+    mx: (value: Stitches.ScaleValue<'space'>) => ({
+      marginLeft: value,
+      marginRight: value,
+    }),
+    my: (value: Stitches.ScaleValue<'space'>) => ({
+      marginTop: value,
+      marginBottom: value,
+    }),
+    pt: (value: Stitches.ScaleValue<'space'>) => ({
+      paddingTop: value,
+    }),
+    pr: (value: Stitches.ScaleValue<'space'>) => ({
+      paddingRight: value,
+    }),
+    pb: (value: Stitches.ScaleValue<'space'>) => ({
+      paddingBottom: value,
+    }),
+    pl: (value: Stitches.ScaleValue<'space'>) => ({
+      paddingLeft: value,
+    }),
+    px: (value: Stitches.ScaleValue<'space'>) => ({
+      paddingLeft: value,
+      paddingRight: value,
+    }),
+    py: (value: Stitches.ScaleValue<'space'>) => ({
       paddingTop: value,
       paddingBottom: value,
     }),

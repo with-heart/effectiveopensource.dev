@@ -1,6 +1,6 @@
-import {global} from './system'
+import {globalCss} from './system'
 
-export const globalStyles = global({
+export const globalStyles = globalCss({
   html: {
     fontSize: '1.25rem',
     lineHeight: 1.5,
