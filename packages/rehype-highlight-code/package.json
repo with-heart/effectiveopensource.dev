@@ -6,7 +6,7 @@
     "dist"
   ],
   "license": "MIT",
-  "author": "Mark Chandler <github@chanchan.io>",
+  "author": "with-heart <with.heart+git@pm.me>",
   "dependencies": {
     "hast-util-to-html": "^7.0.0",
     "hast-util-to-string": "^1.0.4",

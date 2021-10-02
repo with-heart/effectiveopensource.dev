@@ -6,7 +6,7 @@
     "dist"
   ],
   "license": "MIT",
-  "author": "Mark Chandler <github@chanchan.io>",
+  "author": "with-heart <with.heart+git@pm.me>",
   "dependencies": {
     "unist-util-visit": "^2.0.0"
   }
