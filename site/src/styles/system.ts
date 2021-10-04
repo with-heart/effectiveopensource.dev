@@ -37,6 +37,7 @@ export const {
       xxl: '2.5rem',
     },
     space: {
+      auto: 'auto',
       none: '0rem',
       xxs: '0.25rem',
       xs: '0.5rem',
