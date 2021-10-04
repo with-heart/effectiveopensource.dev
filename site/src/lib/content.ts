@@ -1,7 +1,7 @@
 import {promises as fs} from 'fs'
 import path from 'path'
 
-const contentPath = path.join(process.cwd(), 'content')
+const contentPath = 'src/pages'
 
 export const getAllContent = async () => {
   const files = await fs.readdir(contentPath)
