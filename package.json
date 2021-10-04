@@ -12,6 +12,7 @@
     "build": "preconstruct build && manypkg run site build",
     "postinstall": "preconstruct dev",
     "start": "manypkg run site dev",
+    "type-check": "manypkg run site type-check",
     "test": "jest"
   },
   "dependencies": {
