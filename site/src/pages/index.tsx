@@ -1,9 +1,15 @@
+import {GetStaticProps} from 'next'
 import Head from 'next/head'
 import {Container} from '../components/Container'
 import {Heading} from '../components/Heading'
 import {Prose} from '../components/Prose'
 import {Stack} from '../components/Stack'
 import {Text} from '../components/Text'
+import {ContentMetadata, getLatestContent} from '../lib/content'
+
+interface IndexProps {
+  latestContent: ContentMetadata[]
+}
 
 export default function Home() {
   return (
@@ -83,4 +89,13 @@ export default function Home() {
       </Container>
     </>
   )
+}
+
+export const getStaticProps: GetStaticProps<IndexProps> = async () => {
+  const latestContent = await getLatestContent({limit: 10})
+  return {
+    props: {
+      latestContent,
+    },
+  }
 }
