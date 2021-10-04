@@ -1,21 +1,27 @@
 import {promises as fs} from 'fs'
+import globby from 'globby'
 import path from 'path'
 
 const contentPath = 'src/pages'
 
 export const getAllContent = async () => {
-  const files = await fs.readdir(contentPath)
-  const mdxFiles = files.filter((file) => file.endsWith('.mdx'))
+  const files = await globby(contentPath, {
+    expandDirectories: {
+      extensions: ['mdx'],
+    },
+  })
 
-  return mdxFiles.map((file) => {
+  return files.map((file) => {
+    const filePath = path.relative(contentPath, file)
+    const slug = filePath.replace('.mdx', '').split('/')
     return {
-      slug: file.replace('.mdx', ''),
+      slug,
     }
   })
 }
 
-export const getContentBySlug = async (slug: string) => {
-  const filePath = path.join(contentPath, `${slug}.mdx`)
+export const getContentBySlug = async (slug: string[]) => {
+  const filePath = path.join(contentPath, `${slug.join('/')}.mdx`)
   const fileContents = await fs.readFile(filePath, 'utf-8')
   return fileContents
 }
