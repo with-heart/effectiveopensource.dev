@@ -89,7 +89,8 @@ export const Stack = styled('div', {
 
 export const Container = styled('div', {
   width: '100%',
-  mx: 'auto',
+  marginLeft: 'auto',
+  marginRight: 'auto',
   maxWidth: '50ch',
   position: 'static',
 
