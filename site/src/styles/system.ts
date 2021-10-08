@@ -1,16 +1,6 @@
+import {sage} from '@radix-ui/colors'
 import type * as Stitches from '@stitches/react'
 import {createStitches} from '@stitches/react'
-import {
-  blue,
-  emerald,
-  gray,
-  green,
-  indigo,
-  paletteToScaledColors,
-  pink,
-  red,
-  violet,
-} from './color-palettes'
 
 export const {
   styled,
@@ -48,26 +38,20 @@ export const {
       xxl: '3rem',
     },
     colors: {
-      ...paletteToScaledColors(gray, 'gray'),
-      ...paletteToScaledColors(violet, 'violet'),
-      ...paletteToScaledColors(blue, 'blue'),
-      ...paletteToScaledColors(indigo, 'indigo'),
-      ...paletteToScaledColors(emerald, 'emerald'),
-      ...paletteToScaledColors(green, 'green'),
-      ...paletteToScaledColors(pink, 'pink'),
-      ...paletteToScaledColors(red, 'red'),
+      ...sage,
+      bg: '$sage1',
       white: 'rgba(255, 255, 255, 1)',
-      accentLight: '$gray200',
-      accentSolid: '$gray900',
-      accentText: '$gray900',
-      headingText: '$gray900',
-      text: '$gray700',
-      lightText: '$gray500',
-      preText: '$accentLight',
-      preBg: '$gray800',
+      accentLight: '$sage9',
+      accentSolid: '$sage11',
+      accentText: '$sage12',
+      headingText: '$sage12',
+      text: '$sage12',
+      lightText: '$sage11',
+      preText: '$sage3',
+      preBg: '$sage12',
       codeText: '$accentText',
       listBulletText: '$lightText',
-      listBulletSolid: '$gray300',
+      listBulletSolid: '$sage11',
     },
     fontWeights: {
       lightest: 200,

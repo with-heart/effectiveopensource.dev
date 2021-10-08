@@ -1,10 +1,10 @@
 import {styled} from './system'
 
 export const Pre = styled('pre', {
-  $$background: '$colors$gray900',
+  $$background: '$colors$sage10',
   $$text: '$colors$white',
-  $$lineNumbers: '$colors$gray400',
-  $$fadedLine: '$colors$gray400',
+  $$lineNumbers: '$colors$sage10',
+  $$fadedLine: '$colors$sage9',
 
   overflow: 'auto',
   fontFamily: '$monospace',
