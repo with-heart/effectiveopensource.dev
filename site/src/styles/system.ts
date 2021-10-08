@@ -1,16 +1,6 @@
+import {gray} from '@radix-ui/colors'
 import type * as Stitches from '@stitches/react'
 import {createStitches} from '@stitches/react'
-import {
-  blue,
-  emerald,
-  gray,
-  green,
-  indigo,
-  paletteToScaledColors,
-  pink,
-  red,
-  violet,
-} from './color-palettes'
 
 export const {
   styled,
@@ -48,26 +38,20 @@ export const {
       xxl: '3rem',
     },
     colors: {
-      ...paletteToScaledColors(gray, 'gray'),
-      ...paletteToScaledColors(violet, 'violet'),
-      ...paletteToScaledColors(blue, 'blue'),
-      ...paletteToScaledColors(indigo, 'indigo'),
-      ...paletteToScaledColors(emerald, 'emerald'),
-      ...paletteToScaledColors(green, 'green'),
-      ...paletteToScaledColors(pink, 'pink'),
-      ...paletteToScaledColors(red, 'red'),
+      ...gray,
+      bg: '$gray1',
       white: 'rgba(255, 255, 255, 1)',
-      accentLight: '$gray200',
-      accentSolid: '$gray900',
-      accentText: '$gray900',
-      headingText: '$gray900',
-      text: '$gray700',
-      lightText: '$gray500',
-      preText: '$accentLight',
-      preBg: '$gray800',
+      accentLight: '$gray9',
+      accentSolid: '$gray10',
+      accentText: '$gray12',
+      headingText: '$gray12',
+      text: '$gray12',
+      lightText: '$gray11',
+      preText: '$gray3',
+      preBg: '$gray12',
       codeText: '$accentText',
       listBulletText: '$lightText',
-      listBulletSolid: '$gray300',
+      listBulletSolid: '$gray11',
     },
     fontWeights: {
       lightest: 200,

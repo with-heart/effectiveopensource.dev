@@ -9,8 +9,8 @@ export const globalStyles = globalCss({
   },
   body: {
     margin: 0,
-    backgroundColor: '#fefdfa',
-    color: '$gray900',
+    backgroundColor: '$bg',
+    color: '$gray12',
     position: 'relative',
     fontFamily: '$body',
     fontWeight: 300,

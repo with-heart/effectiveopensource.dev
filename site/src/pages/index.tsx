@@ -13,21 +13,14 @@ export default function Home() {
         <Stack direction="vertical" spacing="lg" css={{mx: '$sm'}}>
           <header>
             <Stack direction="vertical" spacing="xs">
-              <Heading
-                size="xxl"
-                align="center"
-                css={{
-                  fontWeight: 300,
-                  color: '$gray900',
-                }}
-              >
+              <Heading size="xxl" align="center" css={{fontWeight: 300}}>
                 Effective Open Source
               </Heading>
               <Text
                 align="center"
                 css={{
                   fontWeight: 300,
-                  color: '$gray800',
+                  color: '$gray11',
                   fontFamily: '$heading',
                 }}
               >
