@@ -20,7 +20,7 @@ export default function Home() {
                 align="center"
                 css={{
                   fontWeight: 300,
-                  color: '$gray11',
+                  color: '$sage11',
                   fontFamily: '$heading',
                 }}
               >

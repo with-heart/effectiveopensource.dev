@@ -1,4 +1,4 @@
-import {gray} from '@radix-ui/colors'
+import {sage} from '@radix-ui/colors'
 import type * as Stitches from '@stitches/react'
 import {createStitches} from '@stitches/react'
 
@@ -38,20 +38,20 @@ export const {
       xxl: '3rem',
     },
     colors: {
-      ...gray,
-      bg: '$gray1',
+      ...sage,
+      bg: '$sage1',
       white: 'rgba(255, 255, 255, 1)',
-      accentLight: '$gray9',
-      accentSolid: '$gray10',
-      accentText: '$gray12',
-      headingText: '$gray12',
-      text: '$gray12',
-      lightText: '$gray11',
-      preText: '$gray3',
-      preBg: '$gray12',
+      accentLight: '$sage9',
+      accentSolid: '$sage11',
+      accentText: '$sage12',
+      headingText: '$sage12',
+      text: '$sage12',
+      lightText: '$sage11',
+      preText: '$sage3',
+      preBg: '$sage12',
       codeText: '$accentText',
       listBulletText: '$lightText',
-      listBulletSolid: '$gray11',
+      listBulletSolid: '$sage11',
     },
     fontWeights: {
       lightest: 200,

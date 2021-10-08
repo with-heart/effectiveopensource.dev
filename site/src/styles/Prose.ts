@@ -9,7 +9,7 @@ const rem = (px: number) => `${round(px / 16)}rem`
 const em = (px: number, base: number) => `${round(px / base)}em`
 
 export const Lead = styled('p', {
-  color: '$gray11',
+  color: '$sage11',
   fontSize: em(20, 16),
   lineHeight: round(32 / 20),
   marginTop: em(24, 20),

@@ -10,7 +10,7 @@ export const globalStyles = globalCss({
   body: {
     margin: 0,
     backgroundColor: '$bg',
-    color: '$gray12',
+    color: '$sage12',
     position: 'relative',
     fontFamily: '$body',
     fontWeight: 300,
