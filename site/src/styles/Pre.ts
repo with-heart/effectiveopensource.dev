@@ -1,4 +1,4 @@
-import {styled} from './system'
+import {styled} from '../stitches.config'
 
 export const Pre = styled('pre', {
   $$background: '$colors$sage10',

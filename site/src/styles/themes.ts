@@ -1,4 +1,4 @@
-import {createTheme} from './system'
+import {createTheme} from '../stitches.config'
 
 export const pinkTheme = createTheme({
   colors: {

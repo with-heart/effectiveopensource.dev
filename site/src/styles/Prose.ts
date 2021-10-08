@@ -1,4 +1,4 @@
-import {styled} from './system'
+import {styled} from '../stitches.config'
 
 const round = (num: number) =>
   num
