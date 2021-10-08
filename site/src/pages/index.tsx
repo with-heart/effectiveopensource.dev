@@ -1,5 +1,9 @@
 import Head from 'next/head'
-import {Container, Heading, Prose, Stack, Text} from '../styles'
+import {Container} from '../components/Container'
+import {Heading} from '../components/Heading'
+import {Prose} from '../components/Prose'
+import {Stack} from '../components/Stack'
+import {Text} from '../components/Text'
 
 export default function Home() {
   return (

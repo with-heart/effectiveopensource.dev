@@ -1,5 +1,5 @@
 import {styled} from '../stitches.config'
-import {Stack} from '../styles'
+import {Stack} from './Stack'
 
 const SeedlingText = styled('p', {
   backgroundColor: '$accentSolid',

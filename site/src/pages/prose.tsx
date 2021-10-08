@@ -1,4 +1,5 @@
-import {Flex, Lead, Prose} from '../styles'
+import {Flex} from '../components/Flex'
+import {Lead, Prose} from '../components/Prose'
 
 export default function ProsePage() {
   return (
