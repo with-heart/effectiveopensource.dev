@@ -3,7 +3,7 @@ import '@fontsource/newsreader/variable.css'
 import '@fontsource/source-code-pro'
 import '@fontsource/source-code-pro/400-italic.css'
 import '@fontsource/source-code-pro/600.css'
-import {globalStyles} from '../src/styles'
+import {globalStyles} from '../src/stitches.config'
 
 export const parameters = {
   actions: {argTypesRegex: '^on[A-Z].*'},
