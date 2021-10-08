@@ -10,8 +10,10 @@
   ],
   "scripts": {
     "build": "preconstruct build && manypkg run site build",
+    "build-storybook": "manypkg run site build-storybook",
     "postinstall": "preconstruct dev",
     "start": "manypkg run site dev",
+    "storybook": "manypkg run site storybook",
     "type-check": "manypkg run site type-check",
     "test": "jest"
   },
