@@ -143,6 +143,7 @@ export const Prose = styled('article', {
     paddingRight: em(16, 14),
     paddingBottom: em(12, 14),
     paddingLeft: em(16, 14),
+    overflowX: 'scroll',
   },
   'pre code': {
     backgroundColor: 'transparent',
