@@ -2,7 +2,6 @@ import {GetStaticProps} from 'next'
 import Head from 'next/head'
 import {Container} from '../components/Container'
 import {Heading} from '../components/Heading'
-import {Prose} from '../components/Prose'
 import {Stack} from '../components/Stack'
 import {Text} from '../components/Text'
 import {ContentMetadata, getLatestContent} from '../lib/content'
@@ -56,35 +55,6 @@ export default function Home() {
               <Text>🌱</Text>
             </Stack>
           </div>
-          <Prose as="article" color="pink">
-            <h1>Content Thesis</h1>
-            <Text>
-              Hello, I'm Mark Chandler. I'm a software engineer and open source
-              maintainer from Cincinnati, Ohio.
-            </Text>
-            <Text>
-              I've always been passionate about open source development, which
-              is the process of creating software through global, voluntary
-              communities built around cooperation and knowledge-sharing. I care
-              about open source stewardship because I've experienced the open
-              source process from every direction—as a consumer, a contributor,
-              and a maintainer—and I know first-hand how difficult it is to
-              coordinate open source development in a way that produces
-              effective software backed by a healthy, dynamic, and open
-              community.
-            </Text>
-            <Text>
-              Every week, I publish content on effectiveopensource.dev exploring
-              topics related to effective open source stewardship, such as
-              community-building, accessible documentation, contribution
-              processes, and project planning and tooling.
-            </Text>
-            <Text>
-              These articles are for open source maintainers who want to expand
-              the possibilities of their projects and build vibrants communities
-              to support them.
-            </Text>
-          </Prose>
         </Stack>
       </Container>
     </>
