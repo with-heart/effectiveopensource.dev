@@ -4,12 +4,6 @@ export const Flex = styled('div', {
   display: 'flex',
 
   variants: {
-    centered: {
-      true: {
-        alignItems: 'center',
-        justifyContent: 'center',
-      },
-    },
     direction: {
       row: {
         flexDirection: 'row',
