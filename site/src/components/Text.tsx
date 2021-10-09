@@ -3,6 +3,7 @@ import {styled} from '../stitches.config'
 export const Text = styled('p', {
   margin: '0',
   fontVariantNumeric: 'tabular-nums',
+  fontSize: 'inherit',
 
   variants: {
     size: {
@@ -22,9 +23,5 @@ export const Text = styled('p', {
     underline: {
       true: {textDecoration: 'underline'},
     },
-  },
-
-  defaultVariants: {
-    size: 'md',
   },
 })
