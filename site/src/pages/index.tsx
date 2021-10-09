@@ -1,7 +1,9 @@
 import {GetStaticProps} from 'next'
 import Head from 'next/head'
 import {Container} from '../components/Container'
+import {Flex} from '../components/Flex'
 import {Heading} from '../components/Heading'
+import {LatestContent} from '../components/LatestContent'
 import {Stack} from '../components/Stack'
 import {Text} from '../components/Text'
 import {ContentMetadata, getLatestContent} from '../lib/content'
@@ -10,7 +12,7 @@ interface IndexProps {
   latestContent: ContentMetadata[]
 }
 
-export default function Home() {
+export default function Home({latestContent}: IndexProps) {
   return (
     <>
       <Head>
@@ -55,6 +57,13 @@ export default function Home() {
               <Text>🌱</Text>
             </Stack>
           </div>
+
+          <Flex direction="column" gap="lg">
+            <Heading as="h2" size="xl">
+              Latest Content
+            </Heading>
+            <LatestContent content={latestContent} />
+          </Flex>
         </Stack>
       </Container>
     </>
