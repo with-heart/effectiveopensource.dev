@@ -11,6 +11,7 @@ const contentPath = 'src/pages'
 const getContentFiles = async () => {
   return globby(contentPath, {
     expandDirectories: {
+      files: ['*'],
       extensions: ['mdx'],
     },
   })
