@@ -47,17 +47,19 @@ export interface ContentMetadata {
   slug: string
   publishedOn: string
   title: string
+  description: string
 }
 
 const getContentMetadata = async (file: string): Promise<ContentMetadata> => {
   const content = await fs.readFile(file, 'utf-8')
   const frontmatter = matter(content)
-  const {publishedOn, title} = frontmatter.data ?? {}
+  const {publishedOn, description, title} = frontmatter.data ?? {}
 
   return {
     slug: fileToSlug(file).join('/'),
     publishedOn,
     title,
+    description,
   }
 }
 
