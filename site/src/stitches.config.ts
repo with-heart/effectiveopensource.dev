@@ -60,6 +60,10 @@ export const {
       bold: 500,
       bullet: 400,
     },
+    lineHeights: {
+      body: 1.5,
+      heading: 1.125,
+    },
     shadows: {
       small: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
       medium:
@@ -126,7 +130,7 @@ export const {
 export const globalStyles = globalCss({
   html: {
     fontSize: '1.25rem',
-    lineHeight: 1.5,
+    lineHeight: '$body',
     textRendering: 'optimizeLegibility',
     '@sm': {fontSize: '1.5rem'},
   },

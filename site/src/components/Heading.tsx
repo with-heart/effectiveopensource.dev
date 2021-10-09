@@ -1,7 +1,7 @@
 import {styled} from '../stitches.config'
 
 export const Heading = styled('h1', {
-  lineHeight: 1.15,
+  lineHeight: '$heading',
   variants: {
     size: {
       xs: {fontSize: '$xs'},
