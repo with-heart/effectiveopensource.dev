@@ -1,4 +1,4 @@
-import {styled} from './system'
+import {styled} from '../stitches.config'
 
 export const Pre = styled('pre', {
   $$background: '$colors$sage10',
@@ -81,14 +81,14 @@ export const Pre = styled('pre', {
   },
 
   '.highlight-word': {
-    fontWeight: '$heaviest',
+    fontWeight: '$bold',
     color: '$$text',
     backgroundColor: '$$highlightWord',
   },
 
   '.language-md': {
     '.token.bold .token.content': {
-      fontWeight: '$heaviest',
+      fontWeight: '$bold',
     },
     '.token.italic .token.content': {
       fontStyle: 'italic',

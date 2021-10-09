@@ -1,10 +1,10 @@
 import {getMDXComponent} from 'mdx-bundler/client'
 import {GetStaticPaths, GetStaticPropsContext} from 'next'
 import {useMemo} from 'react'
+import {Pre} from '../components/Pre'
 import {ContentLayout} from '../layout/ContentLayout'
 import {getAllContent, getContentBySlug} from '../lib/content'
 import {compileMarkdown} from '../lib/markdown'
-import {Pre} from '../styles/Pre'
 
 interface StaticProps {
   code: string

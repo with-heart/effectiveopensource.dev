@@ -1,10 +1,22 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import {ReactNode} from 'react'
+import {AccentClip} from '../components/AccentClip'
+import {Container} from '../components/Container'
 import {DigitalGardenNotice} from '../components/DigitalGardenNotice'
+import {Heading} from '../components/Heading'
+import {Lead, Prose} from '../components/Prose'
 import {Seedlings} from '../components/Seedlings'
-import {Container, Heading, Lead, Prose, Stack} from '../styles'
-import {AccentClip, Footer} from '../styles/components'
+import {Stack} from '../components/Stack'
+import {styled} from '../stitches.config'
+
+const Footer = styled('footer', {
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+  py: '$xs',
+})
 
 export const ContentLayout = ({
   frontmatter,

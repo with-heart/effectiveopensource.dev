@@ -1,4 +1,5 @@
-import {styled, Text} from '../styles'
+import {styled} from '../stitches.config'
+import {Text} from './Text'
 
 const Notice = styled('p', {
   fontSize: '$xs',

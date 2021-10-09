@@ -5,7 +5,7 @@ import NextDocument, {
   Main,
   NextScript,
 } from 'next/document'
-import {getCssText} from '../styles'
+import {getCssText} from '../stitches.config'
 
 export default class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {

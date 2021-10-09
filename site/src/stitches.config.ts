@@ -14,7 +14,8 @@ export const {
   theme: {
     fonts: {
       heading: 'NewsreaderVariable, Newsreader, serif',
-      body: "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+      body:
+        "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       monospace:
         'Source Code Pro, ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace',
     },
@@ -54,11 +55,14 @@ export const {
       listBulletSolid: '$sage11',
     },
     fontWeights: {
-      lightest: 200,
-      light: 300,
-      medium: 400,
-      heavy: 500,
-      heaviest: 600,
+      body: 300,
+      heading: 600,
+      bold: 500,
+      bullet: 400,
+    },
+    lineHeights: {
+      body: 1.5,
+      heading: 1.125,
     },
     shadows: {
       small: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
@@ -120,5 +124,97 @@ export const {
       paddingTop: value,
       paddingBottom: value,
     }),
+  },
+})
+
+export const globalStyles = globalCss({
+  html: {
+    fontSize: '1.25rem',
+    lineHeight: '$body',
+    textRendering: 'optimizeLegibility',
+    '@sm': {fontSize: '1.5rem'},
+  },
+  body: {
+    margin: 0,
+    backgroundColor: '$bg',
+    color: '$sage12',
+    position: 'relative',
+    fontFamily: '$body',
+    fontWeight: 300,
+    minHeight: '100%',
+  },
+  '*, *::before, *::after': {
+    position: 'relative',
+    borderWidth: 0,
+    borderStyle: 'solid',
+    boxSizing: 'border-box',
+  },
+  ':root': {
+    MozTabSize: 4,
+    tabSize: 4,
+  },
+  [`body,
+    blockquote,
+    dl,
+    dd,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    hr,
+    figure,
+    p,
+    pre`]: {
+    margin: 0,
+  },
+  hr: {
+    height: 0,
+    color: 'inherit',
+  },
+  'b, strong': {
+    fontWeight: '$bold',
+  },
+  'pre, code, kbd, samp': {
+    fontFamily: '$monospace',
+    fontSize: '1em',
+  },
+  'sub, sup': {
+    fontSize: '75%',
+    lineHeight: 0,
+    verticalAlign: 'baseline',
+  },
+  sub: {
+    bottom: '-0.25em',
+  },
+  sup: {
+    top: '-0.5em',
+  },
+  table: {
+    textIndent: 0,
+    borderColor: 'inherit',
+  },
+  a: {
+    backgroundColor: 'transparent',
+    color: 'inherit',
+    textDecoration: 'inherit',
+  },
+  'ul, ol': {
+    margin: 0,
+    padding: 0,
+    listStyleType: 'none',
+  },
+  'h1, h2, h3, h4, h5, h6': {
+    fontFamily: '$heading',
+    fontSize: 'inherit',
+    fontWeight: 'inherit',
+  },
+  img: {
+    borderStyle: 'none',
+  },
+  'img, video': {
+    maxWidth: '100%',
+    height: 'auto',
   },
 })

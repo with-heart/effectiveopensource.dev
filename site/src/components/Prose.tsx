@@ -1,4 +1,4 @@
-import {styled} from './system'
+import {styled} from '../stitches.config'
 
 const round = (num: number) =>
   num
@@ -42,7 +42,7 @@ export const Prose = styled('article', {
   },
   h1: {
     color: '$headingText',
-    fontWeight: '$heaviest',
+    fontWeight: '$heading',
     fontSize: em(36, 16),
     mt: 0,
     mb: em(32, 36),
@@ -50,7 +50,7 @@ export const Prose = styled('article', {
   },
   h2: {
     color: '$headingText',
-    fontWeight: '$heavy',
+    fontWeight: '$bold',
     fontSize: em(24, 16),
     mt: em(48, 24),
     mb: em(24, 24),
@@ -58,7 +58,7 @@ export const Prose = styled('article', {
   },
   h3: {
     color: '$headingText',
-    fontWeight: '$medium',
+    fontWeight: '$bold',
     fontSize: em(20, 16),
     mt: em(32, 20),
     mb: em(12, 20),
@@ -66,7 +66,7 @@ export const Prose = styled('article', {
   },
   h4: {
     color: '$headingText',
-    fontWeight: '$medium',
+    fontWeight: '$bold',
     mt: em(24, 16),
     mb: em(8, 16),
     lineHeight: round(24 / 16),
@@ -76,11 +76,10 @@ export const Prose = styled('article', {
   a: {
     color: '$accentText',
     textDecoration: 'underline',
-    fontWeight: 500,
   },
   strong: {
     color: '$accentText',
-    fontWeight: 600,
+    fontWeight: '$bold',
   },
   hr: {
     borderColor: '$accentLight',
@@ -89,7 +88,6 @@ export const Prose = styled('article', {
     marginBottom: em(48, 16),
   },
   blockquote: {
-    fontWeight: 500,
     fontStyle: 'italic',
     color: '$accentText',
     borderLeftWidth: '0.25rem',
@@ -119,7 +117,6 @@ export const Prose = styled('article', {
   /** code */
   code: {
     color: '$accentText',
-    fontWeight: 600,
     fontSize: em(14, 16),
     '&::before': {
       content: '"`"',
@@ -143,13 +140,13 @@ export const Prose = styled('article', {
     paddingRight: em(16, 14),
     paddingBottom: em(12, 14),
     paddingLeft: em(16, 14),
+    overflowX: 'scroll',
   },
   'pre code': {
     backgroundColor: 'transparent',
     borderWidth: 0,
     borderRadius: 0,
     padding: 0,
-    fontWeight: 400,
     color: 'inherit',
     fontSize: 'inherit',
     fontFamily: 'inherit',
@@ -185,7 +182,7 @@ export const Prose = styled('article', {
       content: 'counter(list-item, var(--listCounterStyle, decimal)) "."',
       position: 'absolute',
       left: 0,
-      fontWeight: 400,
+      fontWeight: '$bullet',
       color: '$listBulletText',
     },
   },
