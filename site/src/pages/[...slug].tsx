@@ -46,7 +46,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 export const getStaticProps = async (context: GetStaticPropsContext) => {
-  const slug = context.params!.slug as string
+  const slug = context.params!.slug as string[]
   const content = await getContentBySlug(slug)
   const {code, frontmatter} = await compileMarkdown(content)
 
