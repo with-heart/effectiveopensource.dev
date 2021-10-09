@@ -23,4 +23,8 @@ export const Text = styled('p', {
       true: {textDecoration: 'underline'},
     },
   },
+
+  defaultVariants: {
+    size: 'md',
+  },
 })

@@ -15,6 +15,7 @@ export const DigitalGardenNotice = () => {
         as="a"
         href="https://maggieappleton.com/garden-history"
         underline
+        size="xs"
         css={{color: '$accentSolid'}}
       >
         Maggie Appleton's "A Brief History & Ethos of the Digital Garden"
