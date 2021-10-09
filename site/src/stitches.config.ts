@@ -14,7 +14,8 @@ export const {
   theme: {
     fonts: {
       heading: 'NewsreaderVariable, Newsreader, serif',
-      body: "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+      body:
+        "system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
       monospace:
         'Source Code Pro, ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace',
     },
@@ -54,11 +55,10 @@ export const {
       listBulletSolid: '$sage11',
     },
     fontWeights: {
-      lightest: 200,
-      light: 300,
-      medium: 400,
-      heavy: 500,
-      heaviest: 600,
+      body: 300,
+      heading: 600,
+      bold: 500,
+      bullet: 400,
     },
     shadows: {
       small: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
@@ -170,7 +170,7 @@ export const globalStyles = globalCss({
     color: 'inherit',
   },
   'b, strong': {
-    fontWeight: 'bolder',
+    fontWeight: '$bold',
   },
   'pre, code, kbd, samp': {
     fontFamily: '$monospace',
