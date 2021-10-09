@@ -1,6 +1,9 @@
 import {styled} from '../stitches.config'
 
 export const Text = styled('p', {
+  margin: '0',
+  fontVariantNumeric: 'tabular-nums',
+
   variants: {
     size: {
       xs: {fontSize: '$xs'},

@@ -2,9 +2,13 @@ import {styled} from '../stitches.config'
 
 export const Flex = styled('div', {
   display: 'flex',
+
   variants: {
     centered: {
-      true: {},
+      true: {
+        alignItems: 'center',
+        justifyContent: 'center',
+      },
     },
     direction: {
       row: {
@@ -13,27 +17,99 @@ export const Flex = styled('div', {
       column: {
         flexDirection: 'column',
       },
+      rowReverse: {
+        flexDirection: 'row-reverse',
+      },
+      columnReverse: {
+        flexDirection: 'column-reverse',
+      },
+    },
+    align: {
+      start: {
+        alignItems: 'flex-start',
+      },
+      center: {
+        alignItems: 'center',
+      },
+      end: {
+        alignItems: 'flex-end',
+      },
+      stretch: {
+        alignItems: 'stretch',
+      },
+      baseline: {
+        alignItems: 'baseline',
+      },
+    },
+    justify: {
+      start: {
+        justifyContent: 'flex-start',
+      },
+      center: {
+        justifyContent: 'center',
+      },
+      end: {
+        justifyContent: 'flex-end',
+      },
+      between: {
+        justifyContent: 'space-between',
+      },
+      around: {
+        justifyContent: 'space-around',
+      },
+      evenly: {
+        justifyContent: 'space-evenly',
+      },
+      stretch: {
+        justifyContent: 'stretch',
+      },
+    },
+    wrap: {
+      noWrap: {
+        flexWrap: 'nowrap',
+      },
+      wrap: {
+        flexWrap: 'wrap',
+      },
+      wrapReverse: {
+        flexWrap: 'wrap-reverse',
+      },
+    },
+    gap: {
+      auto: {
+        gap: '$auto',
+      },
+      none: {
+        gap: '$none',
+      },
+      xxs: {
+        gap: '$xxs',
+      },
+      xs: {
+        gap: '$xs',
+      },
+      sm: {
+        gap: '$sm',
+      },
+      md: {
+        gap: '$md',
+      },
+      lg: {
+        gap: '$lg',
+      },
+      xl: {
+        gap: '$xl',
+      },
+      xxl: {
+        gap: '$xxl',
+      },
     },
   },
-  compoundVariants: [
-    {
-      centered: true,
-      direction: 'row',
-      css: {
-        alignItems: 'center',
-        justifyContent: 'center',
-      },
-    },
-    {
-      centered: true,
-      direction: 'column',
-      css: {
-        alignItems: 'center',
-        justifyContent: 'center',
-      },
-    },
-  ],
   defaultVariants: {
     direction: 'row',
+    align: 'stretch',
+    justify: 'start',
+    wrap: 'noWrap',
+    gap: 'none',
   },
 })
